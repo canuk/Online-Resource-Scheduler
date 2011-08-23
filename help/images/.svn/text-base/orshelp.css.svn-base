@@ -1,0 +1,3 @@
+.title {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: large}
+.text {  font-family: Verdana, Arial, Helvetica, sans-serif}
+.footnote {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px}

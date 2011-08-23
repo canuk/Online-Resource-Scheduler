@@ -1,0 +1,39 @@
+<html>
+<!-- #BeginTemplate "/Templates/helppage.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>ORS Editing User Info</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="images/orshelp.css" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td> 
+      <div align="center" class="title"><!-- #BeginEditable "title" -->Editing 
+        User Account Information<!-- #EndEditable --></div>
+    </td>
+  </tr>
+  <tr> 
+    <td> <!-- #BeginEditable "body" --> 
+      <table width="500" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> 
+            <p align="center"><img src="images/useracct.jpg" width="463" height="204"></p>
+            <p><span class="text">To modify your user account information including 
+              contact information and password, click on the &#147;Utilities Menu&#148; 
+              link from the main calendar view, then click &#147;Edit My Account&#148;.</span><br>
+            </p>
+          </td>
+        </tr>
+      </table>
+      <!-- #EndEditable --> 
+      <p><a href="index.html">(Back 
+        to topics)</a></p>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

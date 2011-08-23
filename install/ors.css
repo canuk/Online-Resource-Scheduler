@@ -1,0 +1,116 @@
+
+body {
+	margin: 5px;
+	}
+
+input { font-size: smaller }
+
+select { font-size: smaller }
+
+
+#warning {
+	background-color: #ffeeee;
+	color: #dd0000;
+	}
+#warning a:link {color: #990000}     /* unvisited link */
+#warning a:visited {color: #990000}  /* visited link */
+#warning a:hover {color: #ffffff; background: #ff9999; text-decoration: none}   /* mouse over link */
+#warning a:active {color: #990066}   /* selected link */
+
+
+.signuptable {
+	border: solid;
+	border-color: #999;
+	border-width: 1px;
+	margin-bottom: 2px;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:small;
+	vertical-align: top;
+	white-space:nowrap;
+	}
+
+.signuptable #titlerow {
+	background-color: #BBBB66;
+	color: #660000;
+	padding-left: 5px;
+	font-weight: bold;
+	}
+
+.signuptable #titleauthorized {
+	color: #000;
+	font-size:smaller;
+	font-weight: normal;
+	}
+
+.signuptable #warning {
+	font-weight:bold;
+	text-align: center;
+	border: dotted;
+	border-color: #dd0000;
+	border-width: 1px;
+	padding: 5px;
+	}
+.signuptable #resources {
+	vertical-align: top;
+	position: relative;
+	padding-left: 8px;
+	white-space:nowrap;
+	}
+.signuptable #resources:first-line {
+	font-weight: bold;
+	}
+
+.signuptable #daterow {
+	font-weight: bold;
+	}
+
+#datecell {
+	display: inline;
+	position: relative;
+	}
+#timecell {
+	display: inline;
+	position: relative;
+	}
+
+
+#contactinfo {
+	font-size: smaller;
+	}
+#contactinfo:first-line {
+	font-weight: bold;
+	font-size: larger;
+	}
+
+#comment {
+	font-weight: bold;
+	vertical-align: top
+	}
+
+.actionsmenu {
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:small;
+	white-space:nowrap;
+	color:#000066;
+	background-color: #BBBB66;
+	}
+.actionsmenu li {
+	display: inline;
+	padding-left: 6px;
+	padding-right: 3px;
+	border-right: dotted;
+	border-width: 1px;
+	}
+.actionsmenu li#last {
+	border-right: none;
+	}
+.actionsmenu #title {
+	color:#000000;
+	font-weight:bold;
+	border-right: none;
+	}
+.actionsmenu a:link {color: #000066; text-decoration: none}     /* unvisited link */
+.actionsmenu a:visited {color: #000066; text-decoration: none}  /* visited link */
+.actionsmenu a:hover {color: #ffffff; background: #000066; text-decoration: none}   /* mouse over link */
+.actionsmenu a:active {color: #990066}   /* selected link */
+

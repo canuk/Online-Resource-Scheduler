@@ -1,0 +1,35 @@
+<HTML><title>Scheduling Help</title> 
+<link rel="stylesheet" href="images/orshelp.css" type="text/css">
+<body bgcolor="#ffffff">
+<h3><img src="images/scheduling.gif" width="376" height="61"><br>
+  <span class="text">View help on:</span></h3>
+<ul>
+  <li class="text"><a href="loggingin.html">Logging-In</a></li>
+  <li><span class="text"> <a href="signup.html">Primary Signup Controls</a> </span> 
+    <ul>
+      <li class="text"><a href="resources.html">Selection of Resources to View</a></li>
+      <li class="text"><a href="dates.html">Selection of Date(s) to View</a></li>
+    </ul>
+  </li>
+  <li><span class="text"><a href="creating.html">Creating a Signup</a> </span> 
+    <ul>
+      <li class="text"><a href="alternates.html">Creating an Alternate Signup</a></li>
+    </ul>
+  </li>
+  <li><span class="text"><a href="editing.html">Editing and Deleteing Existing 
+    SignUps</a> </span> 
+    <ul>
+      <li class="text"><a href="returnresource.html">Returning a Resource Early</a></li>
+      <li class="text"><a href="noshow.html">&quot;No-Show&quot;ing Sign-Ups</a> 
+      </li>
+    </ul>
+  <li class="text"><a href="signuplisting.html">Listing Signups by Resource or 
+    User</a></li>
+  <li class="text"><a href="userinfo.html">Modifying User Account Information</a></li>
+</ul>
+<hr>
+<div align="left"><em><font face="Arial, Helvetica, sans-serif" size="-1"><a href="http://ors.sourceforge.net" target="_blank">Powered-by 
+  ORS</a></font></em></div>
+</body>
+</HTML>
+

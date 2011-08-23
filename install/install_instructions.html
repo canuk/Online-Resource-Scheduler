@@ -1,0 +1,565 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>ORS Quick-start Installation Guide</title>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<h2><img src="scheduling.gif" width="376" height="61"
+ alt="ORS Online Resource Scheduler"><br>
+Quick-start installation, Getting Started and Frequently Asked
+Questions guide: </h2>
+<p>This document specifies filenames using <b><font color="#009900">green
+bold text </font></b>and notices and warnings in <b><font
+ color="#990000">bold red text</font></b>. These instructions are for
+either <b>first time installation</b> or <b>upgrading an old
+installation</b>. Where differences exist between new installations and
+upgrading, they will be identified in the instructions below.</p>
+<p><b>A note about upgrading:</b> The install scripts are designed to
+automatically upgrade a previously installed ORS installation without
+losing any of the existing configuration of the system (including
+resources, users, and program configuration settings). As such,
+upgrading only requires that you perform steps 1-4 of this guide. This
+includes uploading the new files to your server and rerunning the
+install script. After upgrading, you may want to review the program
+configuration settings in case new features have been added which you
+want to customize.</p>
+<table border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td width="20">&nbsp;</td>
+      <td>
+      <p><b>Table of Contents:</b></p>
+      <blockquote>
+        <p><a href="#quickstart"><b>Quick Start Installation
+Instructions</b></a><br>
+        <b><a href="#maintenancemenu">Administrator Utilities
+(Maintenance) Menu</a><br>
+        <a href="#resource">Resource Management</a><br>
+        <a href="#FAQ">FAQ - Frequently Asked Questions</a><br>
+        <a href="#support">Getting Help - Resources</a><br>
+        </b></p>
+      </blockquote>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<hr>
+<div align="right"><a href="#">[Back to top]</a><a href="#"><b></b></a><b><a
+ name="quickstart"></a></b> </div>
+<h2><b>Quick-start installation guide: </b></h2>
+<p><font color="#990000"><b>REQUIREMENTS:</b></font> PHP version 4.0.5
+or higher, Apache server (recommended), and approx. 2 Mb of server
+space.</p>
+<p><b>1) Unzip the ORS zip file</b> this should create three folders:
+"install", "help" and &quot;jscalendar-1.0&quot;. Please read the <a href="license.html">license.html
+file</a> before continuing.</p>
+<p><b><a name="step2">2) NEW INSTALLATIONS: </a> Create a new folder
+on your web site </b>to hold the scheduler. This document will assume
+the folder is named "scheduling" but it can be named anything you wish.
+After creating this folder, you should upload (FTP) the "install" and
+"help" folders and all files contained in them, into your scheduling
+folder (You should do this using an "FTP" client; if you are unfamiliar
+with FTP, take a look at <a href="http://tutorial.ftpplanet.com/LE/">http://tutorial.ftpplanet.com/LE/</a>).</p>
+<p><b>UPGRADING: Upload the new ORS files to the existing install
+folder on your web site. </b>You should overwrite any files in the
+install folder with these new files.</p>
+<p><b><a name="step3"></a>3) Point a browser to the page:
+http://www.mysite.com/scheduling/install/index.html</b> ( replace
+"www.mysite.com/" with your web-site address such as
+"www.blarg.net/~myname/" ) You should see the initial installation page
+with a link to start that the first step of the installation. Click on
+this link. When the first stage is completed, you will see a message
+that you should click another link to continue the installation. If the
+first stage completed successfully, continue to the <a href="#step4">next
+step</a> of this guide.</p>
+<blockquote>
+  <p><font color="#990000"><b>TROUBLESHOOTING:<br>
+  </b></font>* If you receive the message:</p>
+  <blockquote>
+    <p><b>Warning:</b> fopen("../test.txt", "w+") - Permission denied
+in /<i>[some folder name]</i>/install/install.php on line 44<br>
+    </p>
+    <p><b>Install </b><font color="#990000"><b>FAILED</b></font></p>
+    <p><b>We were unable to write to the base scheduling folder
+(/somefolder/scheduling). It is quite possible that you need to set the
+permissions on the base folder to "world writeable" to install ORS (you
+can reset them back to standard permissions after installation). Please
+see the installation instructions for more information.</b></p>
+  </blockquote>
+  <p>the problem is that the PHP system is unable to write into the
+base <b><font color="#009900">scheduling</font></b> folder. You must
+either (1) determine if your web host allows you to run PHP as a "CGI"
+and run it that way (As a CGI, PHP which will often be run with your
+user permissions, and thus will be able to write to the <b><font
+ color="#009900">scheduling</font></b> folder. How you run as a CGI
+depends on your web host, contact them)<i> OR</i> (2) you must
+temporarily set permissions on the base <b><font color="#009900">scheduling</font></b>
+folder to allow the "world" (aka "other" or "everyone") to be able to
+write to the folder (chmod scheduling 777, You do this in your FTP
+client; look for help on "chmod" or "file permissions". After
+installation you <b>must</b> reset the permissions on this folder so
+that the "world" can only read and execute this folder, chmod
+scheduling 755).</p>
+  <p><b>MORE TROUBLESHOOTING:</b> <a href="#FAQ">FAQs at the end of
+this document</a>.</p>
+  <p><font color="#990000"><b>REMINDER:</b></font> If you had to set
+permissions on your <b><font color="#009900">scheduling</font></b>
+folder to world-writeable, you should now reset that folder back to
+world read+execute (755) </p>
+</blockquote>
+<p><b><a name="step4"></a>4) Click on the "continue installation" link</b>.
+After the second stage is completed, click on the final link and the
+configuration page will automatically be brought up (normally, this
+page can be reached using an administrator account and going to the <a
+ href="#maintenancemenu">Utilities Menu</a>, selecting "More..." and
+selecting "Program Configuration"). You MUST select "update
+configuration" to finish the installation.</p>
+<blockquote>
+  <p><font color="#990000"><b>TROUBLESHOOTING:<br>
+  </b></font>* If you receive the message: Attempt to create root_dir
+.htaccess file <font color="#990000">FAILED </font>You must read the <a
+ href="#faq_2">FAQ question relating to this issue</a>.</p>
+  <p>* If you are using a Mac running OS X (and maybe some other
+systems!) and you make it through the previous step without any
+problems but, upon "Continuing Installation" of the scheduler, you
+receive the message:</p>
+  <blockquote>
+    <p><b>Warning:</b> fopen("<i>[somefolder]</i>/scheduling/data/scheduling.lock",
+"w") - Permission denied in <i>[somefolder]</i>/scheduling/functions.php
+on line<i> [some line]</i></p>
+  </blockquote>
+  <p>You must read the <a href="#faq_3">FAQ question relating to this
+issue</a>.</p>
+  <p></p>
+  <p><b><font color="#990000">NOTE:</font></b> <br>
+* The default administrator password is "letmein" and the default
+password to change program configuration is "superpass".</p>
+</blockquote>
+<p><b>5)</b> <b>CHANGE THE ADMINISTRATOR PASSWORD:</b> If you do not
+do so, anyone who knows the default password can mess with your
+settings very disastrously!</p>
+<p><b>6) </b><i><b>CHANGE THE ADMINISTRATOR PASSWORD!!!</b></i> We really mean 
+  it! (write it down somewhere) You can also make any user an administrator in 
+  the User Management page. If you forget this password, see the <a href="#faq_lostpw">FAQ 
+  question relating to this issue</a>.</p>
+<p><b>7) Consider changing the program configuration password</b> too.
+The importance of this depends on the security required for your site.
+Only administrators can modify the configuration settings. Obviously,
+only those administrators who know the configuration password can
+modify the configuration settings. If you have only one administrator,
+then the password could be set to nothing to make it easier to set the
+configuration.</p>
+<p><b>8) Review the other configuration settings.</b> Take special note
+of the URL settings such as the e-mail addresses. Set these to
+something other than the default e-mail address. After modifying
+settings, click the "Save Changes" button to save the settings.</p>
+<blockquote>
+  <p><b><font color="#990000">NOTE:<br>
+  </font></b>* Various settings require you to enter very big values in
+SECONDS (PHP uses units of seconds for time). To make this easier to
+read by YOU, you can use multiplication symbols. So instead of entering
+a backup interval of 7 days as 604800 seconds, enter it as 7*24*60*60
+(7 days times 24 hours times 60 minutes times 60 seconds).</p>
+</blockquote>
+<p><b>9) Use the <a href="#resource">"Resource Management" page</a></b>
+to add resources (see notes below)</p>
+<p><b>10) Use the <a href="#user">"User Management" page</a> </b>to
+add users (see notes below)</p>
+<p><b>11) Custom configuration options:</b></p>
+<ul>
+  <li> You can add a custom image to the login screen (it will take the
+place of the default "ORS" graphic) by renaming your file
+"scheduling.gif", uploading the image file into the <b><font
+ color="#009900">scheduling/install</font></b> folder and repeating
+ONLY <a href="#step3">step 3</a> of these instructions.<br>
+    <br>
+  </li>
+  <li> You can add a background image to all screens by modifying the <b><font
+ color="#009900">defaults.php</font></b> line.</li>
+  <pre>define ("page_background", ""); //image for background      of scheduler pages<br></pre>
+and uploading your image to the main scheduling folder.
+</ul>
+<p><font color="#990000"><b>NOTE: </b></font>Depending on the exact
+installation settings of PHP on your web site server, there are a
+variety of ways that the installation of ORS will vary. What we have
+just described here are the steps which <i>should</i> get ORS working
+on most systems no matter how secure the PHP installation. See the FAQ
+at the bottom of this document for more information.</p>
+<hr size="6" noshade>
+<div align="right"><a name="maintenancemenu"></a><a href="#">[Back to
+top]</a> </div>
+<h2>Administrator Utilities (Maintenance) Menu:</h2>
+These items are only accessible by Administrators.
+<h3>Sign-up Infringements:</h3>
+<p>Lists user signups which break rules set in Program Configuration.</p>
+<h3>Use Log:</h3>
+<p>Lists what time and date users were logged in and how long they were
+logged in for (a ~ means that the user did not "log out". These users
+MAY still be logged in...)</p>
+<h3>Action Log:</h3>
+<p>Lists signup actions (signups, changes, deletions, etc) as well as
+some adminsitrative changes</p>
+<h3><a name="user"></a>User Management:</h3>
+<p>Shows the primary list of users. The permissions, account restrictions, and 
+  permitted resources are listed following each name along with various "action" 
+  buttons: [Edit], [Delete], [Restrict].</p>
+<blockquote>
+  <p> Edit - Edit user permissions and information (including contact
+information).<br>
+Delete - Delete user after confirmation.<br>
+Restrict - Turn on user "restriction" which requires that the user must
+sign up in conjunction with a "double-bookable" resource (i.e. another
+resource such as an instructor).</p>
+</blockquote>
+<p>User fields include:</p>
+<blockquote>
+  <p><b>First Name / Last Name :</b> unique name for this user (MUST be
+unique!)<br>
+  <b>Ratings :</b> misc information on this user (used for
+display only). The name of this field can be set in the configuration settings<br>
+  <b>Home / Work Phone :</b> for informational purposes only<br>
+  <b>Email1 / Email2 :</b> Used to contact user when another user makes
+a change to their signups. Note that both e-mail addresses are always
+used to send user e-mails.</p>
+  <p><b>Account Expiration :</b> Date after which this user will be restricted 
+    from signing up privileges without also signing up for a "double-bookable" 
+    resource (i.e. another resource such as an instructor - see Resource Management).</p>
+  <p><b>User Activity :</b> after a predefined period of time without the user 
+    logging in or being signed up, a user will become &quot;inactive&quot;. The 
+    administrator may want to remove these users if they are no longer using the 
+    scheduler. To mark a user as &quot;active&quot; again, simply click the [reactivate] 
+    action button.</p>
+  <p><b>User permissions :</b></p>
+  <blockquote>
+    <table border="0" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td><b>User can sign-up resources</b></td>
+          <td>&nbsp;&nbsp;&nbsp;</td>
+          <td>Self explanatory...</td>
+        </tr>
+        <tr>
+          <td><b>User has calendar authority</b></td>
+          <td>&nbsp;</td>
+          <td>User can modify other people's signups.</td>
+        </tr>
+        <tr>
+          <td><b>User is administrator</b></td>
+          <td>&nbsp;</td>
+          <td>User can modify users, resources, settings, and view logs.<br>
+(These are in addition to the default administrator account)</td>
+        </tr>
+        <tr>
+          <td><b>User receives e-mailed logs</b></td>
+          <td>&nbsp;</td>
+          <td>User receives action log and backup e-mails.</td>
+        </tr>
+      </tbody>
+    </table>
+  </blockquote>
+  <p><b>Permitted Resources</b>: Defines which resources this user may <b>sign
+up for</b> and which resources the user is a <b>resource monitor</b>
+for (Resource monitors receive e-mail whenever any change is made to a
+given resource).</p>
+</blockquote>
+<hr size="6" noshade>
+<div align="right"><a name="resource"></a><a href="#">[Back to top]</a>
+</div>
+<h3>Resource Management:</h3>
+<p>List of resources for which users can sign up. Use [Add New
+Resource] link to add a new resource and [Edit] and [Delete] buttons on
+each resource line to modify existing resources. Fields include: </p>
+<table border="0" cellspacing="0" cellpadding="2">
+  <tbody> 
+  <tr> 
+    <td valign="top">Order</td>
+    <td valign="top">:</td>
+    <td valign="top">Position of resource in lists (edit a resource to change 
+      its order)</td>
+  </tr>
+  <tr> 
+    <td valign="top">Long Description</td>
+    <td valign="top">:</td>
+    <td valign="top">Long name of resource</td>
+  </tr>
+  <tr> 
+    <td valign="top">Short Desc.</td>
+    <td valign="top">:</td>
+    <td valign="top">Short name (one word/number/etc - used for day &amp; week 
+      views)</td>
+  </tr>
+  <tr> 
+    <td valign="top">Initials</td>
+    <td valign="top">:</td>
+    <td valign="top">Very short name (a few unique letters - used for month view)</td>
+  </tr>
+  <tr> 
+    <td valign="top">New User Access?</td>
+    <td valign="top">:</td>
+    <td valign="top">Do new users have access to this resource by default?</td>
+  </tr>
+  <tr> 
+    <td valign="top">Max Signup Time (Hrs)</td>
+    <td valign="top">:</td>
+    <td valign="top">How long can this resource be booked without a warning? (empty 
+      = no limit)</td>
+  </tr>
+  <tr> 
+    <td valign="top">Double Book?</td>
+    <td valign="top">:</td>
+    <td valign="top">Can this resource be booked along with another without warnings? 
+      (also defines resources which are REQUIRED to be signed up for to allow 
+      a restricted user to sign up for regular resources)</td>
+  </tr>
+  <tr> 
+    <td valign="top">Deny Public View?</td>
+    <td valign="top">:</td>
+    <td valign="top">Should this resource be hidden on the "public" page (when 
+      not logged in)</td>
+  </tr>
+  <tr> 
+    <td valign="top">Comments</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">Any comments in this field will be shown to the user when 
+      they click on the (?) help link in the calendar. This field can be used 
+      to put additional resource information in (e.g. longer listing of features 
+      available on resource)</td>
+  </tr>
+  <tr> 
+    <td valign="top">Warnings</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">Displayed when a user clicks on the ! triangle and optionally 
+      (if Show as &quot;Popup&quot; is checked) when the user signs up for a given 
+      resource. </td>
+  </tr>
+  <tr> 
+    <td valign="top">Access</td>
+    <td valign="top">:</td>
+    <td valign="top">Whole-list control of access to this resource (see user management 
+      for individual user access control)</td>
+  </tr>
+  </tbody> 
+</table>
+<h3>More... :</h3>
+<p>Provides access to additional tools:</p>
+<p><b> Edit Announcements</b> - modify announcement message displayed
+to users when the log into the system.<br>
+<b></b><b>Program Configuration</b> - modify program settings (may
+require password). The configuration page includes descriptions of all
+the settings.</p>
+<p><b>Make Backup File</b> - creates text file to be used for emergency
+restoration of schedule. A backup can be automatically e-mailed to
+indicated users through settings in the Program Configuration page.
+This menu option is to force the program to send a copy.<br>
+<b>Restore from Backup</b> - to be used when restoring from emergency
+backup.</p>
+<p><b>Unlock Data Folder</b> - allow read and write access to data
+folder (NOTE: Use with caution! Relock when done). This is used when
+you need to manually make changes to the scheduling/data folder. It
+will allow you to check the files for error. Note that, depending on
+how your server is set up, doing this may make the files readable and
+writeable by any one who is a user of that server.<br>
+<b>Lock Data Folder</b> - disallow read and write access to data folder.<br>
+<b></b></p>
+<p></p>
+<p></p>
+<hr size="6" noshade>
+<div align="right"><a name="FAQ"></a><a href="#">[Back to top]</a> </div>
+<h2>FAQ - Frequently Asked Question(s)</h2>
+<ul>
+  <li><a href="#faq_lostpw">I've forgotten my Administrator Password or
+Configuration Password! What can I do?</a></li>
+  <li><a href="#newextension">My web host requires that my PHP files be
+named something other than ".php" to be executed.</a></li>
+  <li><a href="#faq_1">Why can't I read or modify the ORS files or the
+data or backup folders? </a></li>
+  <li><a href="#faq_2">During installation I got the message: "Attempt
+to create root_dir .htaccess file <font color="#990000">FAILED</font>"
+What does this mean?</a></li>
+  <li><a href="#faq_3">I'm running Mac OS X and I manage to get to the
+"continue installation" link but then receive a message saying it has a
+problem with the schedule.lck file. What does this mean?</a></li>
+  <li><a href="#uninstall">How do I uninstall ORS?</a></li>
+  <li><a href="#support">I'm still stuck... how can I get support?</a><br>
+  </li>
+</ul>
+<hr>
+<div align="right"><a name="faq_lostpw"></a><a href="#FAQ">[Back to
+FAQs]</a> </div>
+<h2>I've forgotten my Administrator Password or Configuration Password!
+What can I do?</h2>
+<p>In the downloads section of the ORS website (<a href="http://ors.sourceforge.net">http://ors.sourceforge.net</a>), 
+  you can download the &quot;ResetPassword&quot; utility. This function, when 
+  uploaded to your main scheduling folder, should safely reset the administrator 
+  password. <font color="#990000"> <b>Make sure you delete the resetpassword file 
+  after using it! </b></font>Otherwise, someone else could force the password 
+  to be reset and, thus, have access to your administrator account!</p>
+<hr>
+<div align="right"><a name="faq_1"></a><a href="#FAQ">[Back to FAQs]</a>
+</div>
+<p></p>
+<h2>Why can't I read or modify the ORS files or the data or backup
+folders? </h2>
+<p>Depending on how your web site host is set up, the ORS program might
+create files which are not readable by you when you FTP into your
+website.</p>
+<p><b>Short answer:</b> Don't worry about it. If you use the "backup"
+feature of the ORS, you will not need to manually backup these files.
+They can all be restored from the e-mailed backup files. If you need to
+do this, just follow the instructions provided by "restore from backup"
+in the "more..." maintenance menu.</p>
+<p> <b>Long answer: </b>In some installations of PHP (the language
+ORS is written in), for scripts to write to a file, the file must be
+owned by the same user who is running the PHP interpreter. On most
+systems, this user will be something like "web" (not a normal user like
+you but a sort of "ghost" user which serves the files). ORS deals with
+this by creating all of its files itself and then setting permissions
+of these files so that only that user can read them. </p>
+<p>If you want to read or modify the files in the data folder, you can <i>temporarily</i> 
+  make these files accessible by logging into the scheduler as an administrator, 
+  going to the "Maintenance" menu and selecting "Unlock Data Folder". This will 
+  unlock the root data folder, allowing you access. Once done, you should relock 
+  the root folder by selecting "Lock Data Folder" from the maintenance menu. </p>
+<p>If you cannot log into your scheduler to unlock it, the downloads section of 
+  the ORS website (<a href="http://ors.sourceforge.net">http://ors.sourceforge.net</a>) 
+  has a &quot;ForceUnlock&quot; utility which performs the same action as the 
+  above command. </p>
+<p>Alternatively, if you are blessed, your server might be running a special form 
+  of PHP which will allow PHP to run under <i>your</i> name. In this mode, the 
+  files will all be owned by you and you can read and write them as you wish. 
+  You might want to contact your server administrator and ask them if they allow 
+  running "PHP as a CGI" (don't worry if you don't know what it means, just ask 
+  it and hope they say "yes"!) If so, you should try creating, in your root scheduling 
+  folder, a file named ".htaccess" which contains this single line:</p>
+<blockquote>
+  <pre>AddType php-cgi .php</pre>
+</blockquote>
+<p>This will allow ORS to pretend it is <i>you</i> when it is running
+and all the files it creates will be accessible by you.</p>
+<hr>
+<div align="right"><a name="faq_2"></a><a href="#FAQ">[Back to FAQs]</a></div>
+<h3></h3>
+<h3>During installation I got the message:</h3>
+<h3></h3>
+<blockquote>
+  <h3>Attempt to create root_dir .htaccess file <font color="#990000">FAILED</font></h3>
+</blockquote>
+<p>For some reason, your data folder was <b>not protected from
+Internet users</b> browsing your files. You should secure your users'
+personal information by creating a file named <b><font color="#009900">.htaccess</font></b>
+containing the lines:</p>
+<blockquote>
+  <pre>&lt;Limit GET&gt;<br>Order Deny,Allow<br>Deny from All<br>&lt;/Limit&gt;</pre>
+</blockquote>
+<p>then upload this file (using FTP) to your scheduling/data folder. If
+you cannot write to this folder, see the unlockroot instructions under
+the FAQ question: <a href="#faq_1"> <b>"Why can't I read or modify
+the ORS files or the data or backup folders?"</b></a></p>
+<hr>
+<div align="right"><a name="faq_3"></a><a href="#FAQ">[Back to FAQs]</a>
+</div>
+<h3>I'm running Mac OS X and, after clicking "Continue Installation", I
+got the message:</h3>
+<blockquote>
+  <p><b>Warning:</b> fopen("<i>[somefolder]</i>/scheduling/data/scheduling.lock",
+"w") - Permission denied in <i>[somefolder]</i>/scheduling/functions.php
+on line<i> [some line]</i></p>
+</blockquote>
+<p>The web server doesn't have permissions to modify the files in the
+scheduling/data folder. Check with your system administrator but you
+will probably need to change the entire /scheduling folder and all it's
+contents to be owned by the group "web" or "www" (depending on your
+system setup). This will make the scheduling files accessable to the
+web server.</p>
+<hr>
+<div align="right"><a name="newextension"></a><a href="#FAQ">[Back to
+FAQs]</a> </div>
+<h3>My web host requires that my PHP files be named something other
+than ".php" to be executed.</h3>
+<p>If your web host requires that your PHP files be named something <b>other</b>
+than ".php" (for example, some require ".php4") there are two options
+for solving this problem:</p>
+<p><b>Option 1:</b> Create a configuration file which instructs the web
+server to interpret ".php" as ".php4". </p>
+<ul>
+  <li><b>On Apache servers,</b> this can be usually accomplished by
+creating two identical files named ".htaccess" containing the text: </li>
+</ul>
+<blockquote>
+  <blockquote>
+    <pre>AddType application/x-httpd-php4 .php</pre>
+  </blockquote>
+  <p>These files should be created in the base scheduling folder and
+the <b><font color="#009900">install</font></b> folder.</p>
+</blockquote>
+<ul>
+  <li><b>On Netscape servers,</b> this can usually be accomplished by
+creating two identical files named ".nsconfig" containing the text: </li>
+</ul>
+<blockquote>
+  <blockquote>
+    <p></p>
+    <pre>&lt;Files *.php&gt;<br>AddType exp=*.php type=application/x-httpd-php4<br>&lt;/Files&gt;</pre>
+  </blockquote>
+  <p>These files should be created in the base scheduling folder and
+the <b><font color="#009900">install</font></b> folder.</p>
+</blockquote>
+<ul>
+  <li><b>Contact your web host for information regarding other web
+servers.</b></li>
+</ul>
+<p><b>Option 2:</b> (if option 1 is not possible) Edit the <b><font
+ color="#009900">install/default.php</font></b> file and locate the
+line which reads: </p>
+<blockquote>
+  <pre>define("required_php_extension", ".php");</pre>
+</blockquote>
+<p>On this line, you can insert the correct extension in place of
+".php". Next, rename the <b><font color="#009900">install/install.php</font></b>
+file to have the correct extension (rename <b>ONLY</b> this file! The
+others will be renamed automatically) and then repeat <a href="#step3">step
+3</a> of the installation instructions.</p>
+<hr>
+<div align="right"><a name="uninstall"></a><a href="#FAQ">[Back to FAQs]</a>
+</div>
+<h2>How do I uninstall ORS?</h2>
+<p>Two methods:</p>
+<p>(A) From the Maintenance/More... menu (accessible only as an administrator), 
+  select &quot;Restore From Backup&quot;. From the Available Backup File list, 
+  select &quot;** Uninstall ORS Database **&quot;. This will remove all the Data 
+  files. The remaining files in the scheduling folder can usually be deleted using 
+  any standard FTP program. See note below if you are unable to remove the remaining 
+  files.</p>
+<p>(B) To uninstall ORS, you should first use the maintenance menu to unlock the 
+  data folder (If you can't log in or otherwise access this folder, the downloads 
+  section of the ORS website, <a href="http://ors.sourceforge.net">http://ors.sourceforge.net</a>, 
+  has a &quot;ForceUnlock&quot; utility which performs the same action). You can 
+  then simply delete the entire scheduling folder as desired. </p>
+<p>If you are still unable to remove all the files and folders from the scheduling 
+  folder, contact your system administrator. An administrator can always remove 
+  the folder and its contents. Nothing is stored outside of the base scheduling 
+  folder.<br>
+  <br>
+</p>
+<hr size="6" noshade>
+<div align="right"><a name="support"></a><a
+ href="file:///C:/Documents%20and%20Settings/Administrator/My%20Documents/Personal/ORS/scheduling/install/install_instructions.html#">[Back
+to top]</a> </div>
+<h2>Getting Help - Resources</h2>
+There are a variety of resources which might be of use. For support in
+installing or using ORS, check the <a
+ href="http://sourceforge.net/tracker/?group_id=74275&amp;atid=540477">ORS
+Support tracker</a> (Use "Submit New" to post a support item) or
+contact us through the primary developer: <a
+ href="mailto:%20jshaver@users.sourceforge.net">jshaver@users.sourceforge.net</a>
+You can find out more about PHP at: <a href="http://www.php.net/">PHP:
+Hypertext Preprocessor -&nbsp; http://www.php.net/</a> or SourceForge
+at: <a href="http://www.sourceforge.net/">http://www.sourceforge.net/</a><br>
+<br>
+<br>
+<br>
+</body>
+</html>

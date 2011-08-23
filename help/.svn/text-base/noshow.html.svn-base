@@ -1,0 +1,53 @@
+<html>
+<!-- #BeginTemplate "/Templates/helppage.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>ORS NoShowing Signups</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="images/orshelp.css" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td> 
+      <div align="center" class="title"><!-- #BeginEditable "title" -->No-Showing 
+        Another User&#146;s Signup<!-- #EndEditable --></div>
+    </td>
+  </tr>
+  <tr> 
+    <td> <!-- #BeginEditable "body" --> 
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> <img src="images/return.jpg" width="432" height="433" align="right"> 
+            <p><span class="text"><b><i>[Not available on all scheduling systems] 
+              </i></b><br>
+              If a user fails to show up for a given signup, they can be &#147;No-Showed&#148; 
+              which frees the resource up for other users (including promoting 
+              alternate signups for a resource)<br>
+              </span></p>
+            <ol>
+              <li><span class="text">Click on the signup to no-show in the calendar 
+                (A).<br>
+                </span></li>
+              <li><span class="text">Click &#147;No-Show&#148; to end the resource 
+                at the current time or &#147;Cancel&#148; to leave the signup 
+                as-is (B).<br>
+                </span></li>
+            </ol>
+            <p class="footnote">Hint: Before a signup is no-showed, you will be 
+              asked to confirm the action. The action is logged so that the system 
+              administrator is aware of the no-show.</p>
+            <p></p>
+          </td>
+        </tr>
+      </table>
+      <!-- #EndEditable --> 
+      <p><a href="index.html">(Back 
+        to topics)</a></p>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

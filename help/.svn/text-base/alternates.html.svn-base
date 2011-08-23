@@ -1,0 +1,58 @@
+<html>
+<!-- #BeginTemplate "/Templates/helppage.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>ORS Alternate Signups</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="images/orshelp.css" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td> 
+      <div align="center" class="title"><!-- #BeginEditable "title" -->Creating 
+        an Alternate Signup<!-- #EndEditable --></div>
+    </td>
+  </tr>
+  <tr> 
+    <td> <!-- #BeginEditable "body" --> 
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> 
+            <p><img src="images/alternate.jpg" width="380" height="422" align="right"> 
+              <i><span class="text">[Not available on all scheduling systems]<br>
+              </span></i><span class="text">On some schedules, you can sign up 
+              as an &#147;alternate&#148; to another user&#146;s primary signup 
+              on a resource for a given time. The alternate will be promoted to 
+              primary if the original primary cancels before the start time of 
+              your alternate signup. If you have a valid e-mail address stored 
+              with your user information, you will receive an e-mail when the 
+              promotion occurs.</span></p>
+            <ol>
+              <li><span class="text">Enter/click the start and end times as you 
+                would for a standard signup. (A)</span></li>
+              <li><span class="text">Note that this is an alternate (B). To accept 
+                signup, click &#147;Sign-up&#148; (C). To cancel, click &#147;Clear&#148;.</span></li>
+            </ol>
+            <p class="footnote">Hints:<br>
+            </p>
+            <ul>
+              <li>To move the signup to a different resource, simply click the 
+                new resource in the list. The list of available resources can 
+                be limited to only those resources for which this signup is would 
+                be a primary signup by clicking &#147;List Available Only&#148; 
+                (D)</li>
+            </ul>
+            </td>
+        </tr>
+      </table>
+      <!-- #EndEditable --> 
+      <p><a href="index.html">(Back 
+        to topics)</a></p>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

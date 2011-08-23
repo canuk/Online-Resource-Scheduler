@@ -1,0 +1,96 @@
+<html>
+<!-- #BeginTemplate "/Templates/helppage.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>ORS Creating a signup</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="images/orshelp.css" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td> 
+      <div align="center" class="title"><!-- #BeginEditable "title" -->Creating 
+        a Signup<!-- #EndEditable --></div>
+    </td>
+  </tr>
+  <tr> 
+    <td> <!-- #BeginEditable "body" --> 
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> 
+            <p align="center"><img src="images/creating_1.jpg" width="370" height="410" align="right"></p>
+            <ol>
+              <li><span class="text"> Select the desired resource using the Resource 
+                menu (A)<br>
+                </span></li>
+              <li><span class="text">Enter the starting date and time (B) and 
+                click &#147;Submit&#148; OR click on the starting time block in 
+                the calendar (C)<br>
+                </span></li>
+              <li><span class="text">Enter the ending date and time at the top 
+                of the page OR click on the ending time-block in the calendar 
+                (D)<br>
+                <br>
+                </span><a href="#45">(4-5 continued below...)</a></li>
+            </ol>
+            <p class="footnote">Hints:</p>
+            <ul>
+              <li class="footnote">To sign up for the shortest time period available, 
+                click on the &lt;start&gt; label.<br>
+              </li>
+              <li class="footnote">After &#147;submitting&#148; the start-date, 
+                the calendar can be changed to view different days/weeks before 
+                entering the ending date and time.<br>
+              </li>
+              <li class="footnote">Enter a comment for the signup into the signup 
+                form at any point during the sign-up process (may be required, 
+                depending on the scheduler rules)<br>
+              </li>
+              <li><span class="footnote">When in Month view, signups can only 
+                be entered via the signup form.</span><br>
+              </li>
+            </ul>
+            </td>
+        </tr>
+        <tr>
+          <td>
+            <hr align="left">
+            <img src="images/creating_2.jpg" width="370" height="417" align="right"> 
+            <ol start=4>
+              <li><span class="text"><a name="45"></a>Note the available priority for 
+                requested time block and resource (A).</span></li>
+              <li><span class="text">To accept signup, click &#147;Sign-up&#148; (B). 
+                To cancel, click &#147;Clear&#148;.</span></li>
+            </ol>
+            <p class="footnote">Hints:</p>
+            <ul>
+              <li class="footnote">To move the signup to a different resource, 
+                simply click the new resource in the list. On some systems, a 
+                signup can be made on several resources at a time by using shift-click 
+                to select multiple resources from the list.<br>
+              </li>
+              <li class="footnote">The list of available resources can be limited 
+                to only those resources which are available in the requested time 
+                block by clicking &#147;List Available Only&#148; (C)<br>
+              </li>
+              <li><span class="footnote">On some systems or with certain privileges, 
+                you can sign up as another user by clicking the &#147;As User&#148; 
+                button (not shown &#150; will appear next to &#147;Sign-up&#148;) 
+                and selecting a username from the supplied pull-down menu of users.<br>
+                </span><br>
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+      <!-- #EndEditable --> 
+      <p><a href="index.html">(Back 
+        to topics)</a></p>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

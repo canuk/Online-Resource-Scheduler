@@ -1,0 +1,46 @@
+<html>
+<!-- #BeginTemplate "/Templates/helppage.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>ORS Ending Signup Early</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="images/orshelp.css" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td> 
+      <div align="center" class="title"><!-- #BeginEditable "title" -->Ending 
+        a Signup Early<!-- #EndEditable --></div>
+    </td>
+  </tr>
+  <tr> 
+    <td> <!-- #BeginEditable "body" --> 
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> <img src="images/return.jpg" width="432" height="433" align="right"> 
+            <p><span class="text"><b><i>[Not available on all scheduling systems] 
+              </i></b><br>
+              If a user is done with a resource before the end time of the signup, 
+              they can automatically truncate their signup to the current time 
+              and &#147;return&#148; the resource for others to use.</span></p>
+            <ol>
+              <li><span class="text">Click on the signup to end early in the calendar 
+                (A).<br>
+                </span></li>
+              <li><span class="text">Click &#147;Return Resource&#148; to end 
+                the signup at the current time(B).</span></li>
+            </ol>
+            </td>
+        </tr>
+      </table>
+      <!-- #EndEditable --> 
+      <p><a href="index.html">(Back 
+        to topics)</a></p>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>
