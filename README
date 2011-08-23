@@ -11,5 +11,5 @@ Here is a brief list of things that I'd like to do:
 * Change the login flow, so the login box is it's own page, and if the schedule is allowed to be shown without logging in, then the UI changes.
 * Utilize the jQuery UI stuff for themes, stylings for user settings, on/off switches, etc.
 * Style the announcements
-* Potentially have pre-installed themes, potentially around airplanes, boats, other resrouces
+* Potentially have pre-installed themes, potentially around airplanes, boats, other resources.
 * Change the wording from "sign-ups" to "schedules" or potentially make this a configurable option. (I know, semantics, right?)
